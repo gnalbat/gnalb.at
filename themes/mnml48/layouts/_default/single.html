@@ -1,0 +1,44 @@
+{{ define "main" }}
+<div id="main">
+  <article>
+    <h1 class="entry-title">{{ .Title }}</h1>
+    <div>
+      <div class="content wrap">
+        {{ .Content }}
+      </div>
+    </div>
+    {{ if in .File.Dir "posts" }}
+    <div class="meta wrap">
+      <div class="byline">
+        {{ .Param "author" }}
+        {{ if .Param "twitter-handle" }}
+        <small class="small"><a
+            href="https://twitter.com/{{ .Param "twitter-handle" }}">&commat;{{ .Param "twitter-handle" }}</a></small>
+        {{ end }}
+      </div>
+      <div class="details">
+        <ul>
+          <li>
+            <strong>Date published:</strong> <abbr
+              title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</abbr>
+          </li>
+          <li>
+            <strong>Permalink:</strong> <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+          {{ with .PrevInSection }}
+          <li>
+            <strong>Previous:</strong> <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+          </li>
+          {{ end }}
+          {{ with .NextInSection }}
+          <li>
+            <strong>Next:</strong> <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    {{ end }}
+  </article>
+</div>
+{{ end }}

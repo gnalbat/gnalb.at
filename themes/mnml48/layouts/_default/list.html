@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div id="main">
+    <article>
+        <h1 class="entry-title">{{ .Title }}</h1>
+        <div>
+            <div class="content wrap">
+                {{ .Content }}
+                <!-- Ranges through content/posts/*.md -->
+                {{ range .Pages.GroupByDate "2006" }}
+                <h2>{{ .Key }}</h2>
+                {{ range .Pages.GroupByDate "January" }}
+                <h3>{{ .Key }}</h3>
+                <ul style="list-style: disc;">
+                {{ range .Pages }}
+                    <li>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+                </ul>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </article>
+</div>
+{{ end }}

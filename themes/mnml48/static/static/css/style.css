@@ -1,0 +1,421 @@
+﻿/*
+Author:         erengy
+Last updated:   2018-07-29;
+License:        This .css file is in the public domain. You are free to use it
+                for any purpose without restriction under copyright law.
+*/
+
+@import url(normalize.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic&subset=latin,latin-ext);
+
+body {
+  background-color: #fbfbfb;
+  color: #333;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, serif;
+}
+
+h1 { font-size: 2.00em; }
+h2 { font-size: 1.50em; }
+h3 { font-size: 1.17em; }
+h4 { font-size: 1.00em; }
+h5 { font-size: 0.83em; }
+h6 { font-size: 0.67em; }
+
+a {
+  color: #E34234;
+  text-decoration: none;
+  transition: 0.4s;
+}
+a:hover {
+  color: #333;
+}
+
+abbr {
+  cursor: help;
+  text-decoration: none;
+}
+
+code, blockquote, pre {
+  background-color: #fff;
+  border-bottom: 1px solid #f3f3f3;
+  color: #666;
+}
+
+blockquote, pre {
+  border-left: 3px solid #ebebeb;
+}
+
+blockquote {
+  font-size: 0.9em;
+  margin: 1em;
+  padding: 1em;
+}
+blockquote p:first-of-type {
+  margin-top: 0;
+}
+
+code {
+  border-radius: 2px;
+  padding: 5px;
+}
+
+pre {
+  font-size: 0.8em;
+  margin: 0 1.3em;
+  padding: 0 1em;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #ebebeb;
+  clear: both;
+  margin: 2em auto;
+  max-width: 400px;
+}
+
+/******************************************************************************/
+/* Header */
+
+header {
+  background-color: #f6f6f6;
+  /*border-top: 5px solid #E34234;*/
+  box-shadow: 0px 0px 1px 1px #ebebeb;
+  padding: 1em;
+  text-align: center;
+}
+
+#site-title {
+  font-size: 3em;
+  margin: 0 0 0.3em 0;
+}
+
+header nav {
+  cursor: default;
+  margin: 0.5em 0 0.5em 0;
+}
+
+header nav ul {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  border-bottom: 1px solid #f6f6f6;
+  padding: 4px 8px;
+  transition: 0.2s;
+}
+header nav ul li a:hover {
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 3px;
+}
+
+header nav ul li:before {
+  color: #ddd;
+  content: "|";
+  /*font-size: 1.4em;*/
+  padding-right: 4px;
+  margin: 0;
+}
+header nav ul li:first-of-type:before {
+  content: "";
+  padding: 0;
+}
+
+/******************************************************************************/
+/* Main */
+
+#main {
+  max-width: 960px;
+  min-height: calc(100vh - 10%);
+  margin: 0 auto;
+}
+
+.wrap {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+@media (max-width: 960px) {
+  .wrap {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media (max-width: 720px) {
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.align-left {
+  float: left;
+}
+.align-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.grid-one, img.grid-one, .content img.grid-one {
+  max-width: 100%;
+}
+.grid-two, img.grid-two, .content img.grid-two {
+  max-width: 47%;
+}
+.grid-three, img.grid-three, .content img.grid-three {
+  max-width: 31%;
+}
+.grid-four, img.grid-four, .content img.grid-four {
+  max-width: 23%;
+}
+
+/******************************************************************************/
+/* Content */
+
+.content {
+  line-height: 1.6em;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.content h1, h2, h3, h4, h5, h6 {
+  margin-top: 1.4em;
+}
+
+.content h4 {
+  margin-bottom: -10px;
+}
+
+.content img {
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  box-sizing: border-box;
+  margin: 5px;
+  max-width: 100%;
+  padding: 5px;
+}
+
+.content img.align-center {
+  display: block;
+  margin: 0 auto;
+}
+.content img.align-left {
+  margin-right: 10px;
+}
+.content img.align-right {
+  margin-left: 10px;
+}
+
+.content blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+
+.content figure {
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  display: table;
+  margin: 0 auto;
+  padding: 5px 5px 0px 5px;
+}
+
+.content figure img,
+.content figure figcaption {
+  display: table-row;
+  vertical-align: bottom;
+}
+
+.content figure img {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.content figure figcaption {
+  color: #666;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.content p {
+  text-indent: 1em;
+}
+
+.content p a {
+  border-bottom: 1px solid #fbfbfb;
+}
+.content p a:hover {
+  background-color: #fff;
+  border-bottom: 1px solid #f3f3f3;
+}
+
+.content p.dropcap {
+  text-indent: 0;
+}
+.content p.dropcap:first-letter {
+  font-family: Georgia, serif;
+  font-size: 3.8em;
+  float: left;
+  padding-top: 5px;
+  padding-right: 2px;
+}
+
+.content p.no-indent {
+  text-indent: 0;
+}
+
+.content p:last-of-type:after {
+  color: #ccc;
+  content: "■";
+  padding-left: 4px;
+}
+.content blockquote p:last-of-type:after {
+  content: "";
+}
+
+.content ol,
+.content ul {
+  padding: 0 2em;
+}
+
+.content ol.spacious li,
+.content ul.spacious li {
+  margin-bottom: 0.5em;
+}
+
+.entry-title {
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 1em;
+  padding: 0 10px 16px 10px;
+  text-align: center;
+  line-height: 1em;
+}
+
+.entry-title a {
+  color: #333;
+}
+
+.post-script {
+  color: #bbb;
+  font-family: Georgia, serif;
+  font-size: 80%;
+  line-height: 1.6em;
+}
+
+/******************************************************************************/
+/* Meta */
+
+.meta {
+  border-top: 1px solid #ebebeb;
+  clear: both;
+  line-height: 1.5em;
+  margin-bottom: 40px;
+  padding-top: 20px;
+}
+
+.byline {
+  color: #bbb;
+}
+.byline:before {
+  content: "— ";
+}
+
+.twitter-handle {
+  font-size: 0.8em;
+}
+
+.details {
+  color: #bbb;
+  font-family: Georgia, serif;
+  font-size: 0.8em;
+}
+
+.details ul {
+  margin: 0;
+  padding: 0;
+}
+
+.details ul li {
+  list-style: none;
+}
+
+/******************************************************************************/
+/* Comments */
+
+.comments ol {
+  padding-left: 0;
+}
+
+.comments ol li {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  list-style: none;
+  margin-bottom: 1em;
+  padding: 20px;
+}
+
+.comments ol li p:last-of-type {
+  margin-bottom: 0;
+}
+
+.comments .comment-meta {
+  color: #666;
+  font-family: "Georgia", serif;
+  margin-bottom: 1em;
+}
+
+.comments .comment-meta cite {
+  font-weight: bold;
+}
+
+/******************************************************************************/
+/* Footer */
+
+footer {
+  background-color: #f6f6f6;
+  clear: both;
+  color: #bbb;
+  margin-top: 60px;
+  padding: 1em 0;
+  text-align: center;
+  box-shadow: 1px 0px 1px 1px #ebebeb;
+}
+
+footer #quote {
+  color: #bbb;
+  font-style: italic;
+  margin: 0.5em 0;
+}
+
+footer #license {
+  font-size: 0.8em;
+  margin: 0.5em 0;
+}
+
+footer #license a {
+  color: #bbb;
+}

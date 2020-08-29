@@ -1,0 +1,22 @@
+baseURL = "http://gnalb.at"
+languageCode = "en-us"
+title = "in reveries"
+theme = "mnml48"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "emacs"
+    tabWidth = 4
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[permalinks]
+    posts = "/:year/:month/:title/"
