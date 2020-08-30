@@ -4,3 +4,14 @@
             title="Creative Commons Attribution 4.0 International License">&copy; CC BY 4.0</a></p>
 </footer>
 <script src="/static/js/thescript.js"></script>
+<script>
+    if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+            if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                });
+            }
+        });
+    }
+</script>
