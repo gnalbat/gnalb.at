@@ -114,16 +114,17 @@ header nav ul li a {
   border-bottom: 1px solid #f6f6f6;
   padding: 4px 8px;
   transition: 0.2s;
+  display: inline-block;
 }
 header nav ul li a:hover {
-  background-color: #fff;
-  border-bottom: 1px solid #e8e8e8;
-  border-radius: 3px;
+  background: linear-gradient(-72deg, transparent 8% 10%,white 12% 88%,transparent 90% 92%);
+  /*border-bottom: 1px solid #e8e8e8;*/
+  /*border-radius: 3px;*/
 }
 
 header nav ul li:before {
   color: #ddd;
-  content: "|";
+  content: "/";
   /*font-size: 1.4em;*/
   padding-right: 4px;
   margin: 0;
